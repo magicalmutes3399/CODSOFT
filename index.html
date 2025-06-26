@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography Landing Page</title>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+      scroll-behavior: smooth;
+      background: #fff;
+    }
+
+    .hero {
+      background: url('./component/AYU09306.JPG') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+    }
+
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 100%;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .overlay h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: slideFadeDown 1s ease;
+    }
+
+    .overlay p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      background-color: #ff5a5f;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e04e54;
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .about p,
+    .contact p {
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+
+    .portfolio .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .stats {
+      background: #f3f3f3;
+    }
+
+    .counter-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .counter-box {
+      text-align: center;
+    }
+
+    .counter {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ff5a5f;
+    }
+
+    .testimonials {
+      background: #f9f9f9;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 600px;
+      margin: 2rem auto;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      font-style: italic;
+      font-size: 1.2rem;
+      transition: opacity 0.5s ease;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .icon {
+      width: 30px;
+      margin: 0 10px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s ease, filter 0.3s;
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+      filter: brightness(1) invert(0);
+    }
+
+    @keyframes slideFadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Moments by himanshu</h1>
+      <p>Professional Photography for Every Occasion</p>
+      <a href="#portfolio" class="btn">View Portfolio</a>
+    </div>
+  </header>
+
+  <section class="about" id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m a freelance photographer passionate about capturing raw, authentic moments. From portraits to events, every
+      shot tells a story.</p>
+  </section>
+
+  <section class="portfolio" id="portfolio" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <img src="./component/IMG_8756.JPG" alt="cafe">
+      <img src="./component/product.jpg" alt="product">
+      <img src="./component/IMG_9175.jpg" alt="fashion">
+      <img src="./component/AYU09306.JPG" alt="event">
+    </div>
+  </section>
+
+  <section class="stats" data-aos="fade-up">
+    <h2>My Work in Numbers</h2>
+    <div class="counter-container">
+      <div class="counter-box" data-aos="zoom-in">
+        <span class="counter" data-target="120">0</span>
+        <p>Photoshoots</p>
+      </div>
+      <div class="counter-box" data-aos="zoom-in" data-aos-delay="100">
+        <span class="counter" data-target="85">0</span>
+        <p>Happy Clients</p>
+      </div>
+      <div class="counter-box" data-aos="zoom-in" data-aos-delay="200">
+        <span class="counter" data-target="25">0</span>
+        <p>Events Covered</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials" data-aos="fade-up">
+    <h2>What Clients Say</h2>
+    <div class="slider">
+      <div class="slide active">"Amazing quality! Highly recommended." – Rohit</div>
+      <div class="slide">"Captured the best moments of us in our farewell!" – Satwik</div>
+      <div class="slide">"Creative and professional service!" – Sakshi</div>
+    </div>
+  </section>
+
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/mkgbpyzp",
+    title: "How can we help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+
+  </section>
+
+    <section class="download-portfolio" data-aos="fade-up">
+    <h2>Download My Portfolio</h2>
+    <p>Get a comprehensive look at my work and services.</p>
+    <a href="./component/Portfolio_20250420_231238_0000_compressed.pdf" class="btn" download>Download PDF</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 moments by himanshu</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/moments_by_himanshu?igsh=Mm5ybHh0bzQ0MGg3"><img
+          src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/instagram.svg" alt="Instagram" class="icon" /></a>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Counter Script -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    counters.forEach(counter => {
+      const animate = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const inc = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + inc);
+          setTimeout(animate, 10);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          animate();
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(counter);
+    });
+  </script>
+
+  <!-- Testimonial Slider Script -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 4000);
+  </script>
+
+</body>
+
+</html>
