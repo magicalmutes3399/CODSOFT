@@ -27,7 +27,7 @@
 
 ## 🚀 Live Demo
 
-🔗 [Click here to view live](https://yourusername.github.io/your-repo-name)
+🔗 [Click here to view live]([https://yourusername.github.io/your-repo-name](https://magicalmutes3399.github.io/CODSOFT/))
 
 *(Replace with your actual GitHub Pages URL after deployment)*
 
